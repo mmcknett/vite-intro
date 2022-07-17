@@ -11,6 +11,8 @@ Chosen libraries:
 - Node 18 (Latest stable) [for the Server, as opposed to Bun or Deno]
 - TypeScript (I really should do something in it) [for Language, as opposed to JavaScript]
 - [vitest](https://vitest.dev/) [for Testing, as opposted to Jest, which does babel transpilation under the covers]
+  - [React testing library](https://testing-library.com/docs/react-testing-library/intro) for DOM querying tests
+- React 18 strict mode (Vite's base react project starts with it)
 
 Rejected libraries:
 - [Fastify DX](https://github.com/fastify/fastify-dx/tree/main/packages/fastify-dx-react) [for SSR]
@@ -19,4 +21,22 @@ Rejected libraries:
 
 Choices remaining:
 - [Ladel](https://ladle.dev/blog/introducing-ladle/) [for isolated component testing as opposed to Storybook]
-- React 18 strict mode
+
+## How this app was set up
+
+```sh
+npm create vite@latest  # and select the react-ts variant
+npm i -D vitest
+npm i -D @testing-library/react
+npm i -D jsdom
+```
+
+File changes:
+- Created App.test.tsx with a snapshot test
+- Updated `./vite.config.ts` with jsdom test configuration.
+
+## Initial Impressions
+
+The HMR is mind-blowing. Because Vite uses ES modules and it reloads just the affected React component module, React can literally preserve the state across HMR. That means I can modify the rendered output, save the file, and see the updated React component with the state it was in previously!
+
+It's even smart enough to tell when I've added a `useState` ahead of the existing state, and in that case it resets all the state.
