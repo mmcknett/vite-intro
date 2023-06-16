@@ -1,0 +1,36 @@
+// Vitest Snapshot v1
+
+exports[`Turn > renders with no props as expected 1`] = `
+<DocumentFragment>
+  <span
+    class="correct"
+    data-testid="Angle-0"
+  >
+    A
+  </span>
+  <span
+    class="incorrect"
+    data-testid="Angle-1"
+  >
+    n
+  </span>
+  <span
+    class="incorrect"
+    data-testid="Angle-2"
+  >
+    g
+  </span>
+  <span
+    class="incorrect"
+    data-testid="Angle-3"
+  >
+    l
+  </span>
+  <span
+    class="misplaced"
+    data-testid="Angle-4"
+  >
+    e
+  </span>
+</DocumentFragment>
+`;

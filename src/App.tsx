@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import './App.css';
+import Turn from './Turn';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,22 +10,18 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>Vordle</h1>
+      <h2>Example</h2>
+      <p>
+        <span style={{ color: "green" }}>A</span>UDIO <br/>
+        <span style={{ color: "green" }}>A</span>NGL<span style={{ color: "yellow" }}>E</span> <br/>
+        ...<br/>
+        <span style={{ color: "green" }}>AMBER</span><br/>
+        <Turn guess="ANGLE" referenceWord='AMBER' />
+      </p>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <input type="text" />
+        <button onClick={ () => {}}>Guess</button>
       </div>
       <p className="read-the-docs">
         { getText() }

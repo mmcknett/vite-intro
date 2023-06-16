@@ -5,44 +5,81 @@ exports[`App > renders with no props as expected 1`] = `
   <div
     class="App"
   >
-    <div>
-      <a
-        href="https://vitejs.dev"
-        target="_blank"
-      >
-        <img
-          alt="Vite logo"
-          class="logo"
-          src="/vite.svg"
-        />
-      </a>
-      <a
-        href="https://reactjs.org"
-        target="_blank"
-      >
-        <img
-          alt="React logo"
-          class="logo react"
-          src="/src/assets/react.svg"
-        />
-      </a>
-    </div>
     <h1>
-      Vite + React
+      Vordle
     </h1>
+    <h2>
+      Example
+    </h2>
+    <p>
+      <span
+        style="color: green;"
+      >
+        A
+      </span>
+      UDIO 
+      <br />
+      <span
+        style="color: green;"
+      >
+        A
+      </span>
+      NGL
+      <span
+        style="color: yellow;"
+      >
+        E
+      </span>
+       
+      <br />
+      ...
+      <br />
+      <span
+        style="color: green;"
+      >
+        AMBER
+      </span>
+      <br />
+      <span
+        class="correct"
+        data-testid="ANGLE-0"
+      >
+        A
+      </span>
+      <span
+        class="incorrect"
+        data-testid="ANGLE-1"
+      >
+        N
+      </span>
+      <span
+        class="incorrect"
+        data-testid="ANGLE-2"
+      >
+        G
+      </span>
+      <span
+        class="incorrect"
+        data-testid="ANGLE-3"
+      >
+        L
+      </span>
+      <span
+        class="misplaced"
+        data-testid="ANGLE-4"
+      >
+        E
+      </span>
+    </p>
     <div
       class="card"
     >
+      <input
+        type="text"
+      />
       <button>
-        count is 0
+        Guess
       </button>
-      <p>
-        Edit 
-        <code>
-          src/App.tsx
-        </code>
-         and save to test HMR
-      </p>
     </div>
     <p
       class="read-the-docs"
